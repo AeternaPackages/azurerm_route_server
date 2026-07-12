@@ -5,7 +5,7 @@ locals {
     for k1, v1 in var.route_servers : {
       for k2, v2 in coalesce(v1.route_server_bgp_connections, {}) :
       "${k1}/${k2}" => merge(v2, {
-        route_server_id = module.route_servers.route_servers["${k1}"].id
+        route_server_id = module.route_servers.route_servers_id["${k1}"]
       })
     }
   ]...)
