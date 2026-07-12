@@ -1,4 +1,9 @@
 # --- azurerm_route_server ---
+output "route_servers_id" {
+  description = "Map of id values across all route_servers, keyed the same as var.route_servers"
+  value       = module.route_servers.route_servers_id
+}
+
 output "route_servers_branch_to_branch_traffic_enabled" {
   description = "Map of branch_to_branch_traffic_enabled values across all route_servers, keyed the same as var.route_servers"
   value       = module.route_servers.route_servers_branch_to_branch_traffic_enabled
@@ -60,6 +65,11 @@ output "route_servers_virtual_router_ips" {
 }
 
 # --- azurerm_route_server_bgp_connection ---
+output "route_server_bgp_connections_id" {
+  description = "Map of id values across all route_server_bgp_connections, keyed the same as var.route_server_bgp_connections"
+  value       = module.route_server_bgp_connections.route_server_bgp_connections_id
+}
+
 output "route_server_bgp_connections_name" {
   description = "Map of name values across all route_server_bgp_connections, keyed the same as var.route_server_bgp_connections"
   value       = module.route_server_bgp_connections.route_server_bgp_connections_name
