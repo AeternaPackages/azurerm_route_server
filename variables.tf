@@ -26,8 +26,8 @@ EOT
     resource_group_name              = string
     sku                              = string
     subnet_id                        = string
-    branch_to_branch_traffic_enabled = optional(bool)   # Default: false
-    hub_routing_preference           = optional(string) # Default: "ExpressRoute"
+    branch_to_branch_traffic_enabled = optional(bool)
+    hub_routing_preference           = optional(string)
     tags                             = optional(map(string))
     route_server_bgp_connections = optional(map(object({
       name     = string
