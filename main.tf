@@ -12,12 +12,12 @@ locals {
 }
 
 module "route_servers" {
-  source        = "git::https://github.com/AeternaModules/azurerm_route_server.git?ref=v4.80.0"
+  source        = "git::https://github.com/AeternaModules/azurerm_route_server.git?ref=v4.81.0"
   route_servers = local.route_servers
 }
 
 module "route_server_bgp_connections" {
-  source                       = "git::https://github.com/AeternaModules/azurerm_route_server_bgp_connection.git?ref=v4.80.0"
+  source                       = "git::https://github.com/AeternaModules/azurerm_route_server_bgp_connection.git?ref=v4.81.0"
   route_server_bgp_connections = local.route_server_bgp_connections
   depends_on                   = [module.route_servers]
 }
